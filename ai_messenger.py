@@ -1,14 +1,6 @@
 """
 Generates a friendly, personalized customer recovery message using an LLM.
 
-This is the ONE place in the project that calls an AI model. Turning a
-structured (failure_reason, strategy) pair into natural, reassuring
-customer-facing text is exactly the kind of task an LLM is good at and a
-static template is bad at (templates read robotic and don't adapt tone).
-
-If no API key is configured, we fall back to a clean hand-written template
-so the whole app still runs end-to-end with zero setup -- useful for a demo,
-and also a natural "graceful failure handling" story for the pitch.
 """
 import os
 
